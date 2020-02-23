@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyCrypto_Account</string>
+    <string name="coin_name">Ethereum</string>
+    <string name="coin_symbol">ETH</string>
+    <string name="coin_price">$250.00</string>
+    <string name="coin_price_ph">+2.5%</string>
 </resources>
