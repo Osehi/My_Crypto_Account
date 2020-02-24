@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.polish.mycrypto_account.R
+import com.polish.mycrypto_account.databinding.FragmentFavouriteCoinBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -19,7 +20,13 @@ class FavouriteCoin : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favourite_coin, container, false)
+//        return inflater.inflate(R.layout.fragment_favourite_coin, container, false)
+
+        // inflate the layout via binding
+        val binding = FragmentFavouriteCoinBinding.inflate(inflater, container, false)
+
+        return binding.root
+
     }
 
 
