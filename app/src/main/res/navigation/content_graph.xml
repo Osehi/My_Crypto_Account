@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/content_graph">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_graph"
+    app:startDestination="@id/tabHost2">
+    <fragment
+        android:id="@+id/tabHost2"
+        android:name="com.polish.mycrypto_account.ui.TabHost"
+        android:label="Crypto Coin"
+        tools:layout="@layout/fragment_tab_host" />
 </navigation>
