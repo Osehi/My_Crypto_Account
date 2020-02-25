@@ -10,8 +10,6 @@ import kotlinx.coroutines.*
 
 class Host : AppCompatActivity() {
 
-    private val viewModelJob = Job()
-    private val viewModelScope = CoroutineScope(viewModelJob + Dispatchers.Main)
 
     lateinit var toolbar: Toolbar
 
@@ -29,9 +27,7 @@ class Host : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
 
 
-        viewModelScope.launch {
-            AllCryptoCoinRepository.getCryptoCoinResponse()
-        }
+
     }
 
 

@@ -17,14 +17,14 @@ object AllCryptoCoinRepository {
     suspend fun getCryptoCoinResponse():List<CryptoCoin>{
         var data = listOf<CryptoCoin>()
         withContext(Dispatchers.IO){
-            Log.e("CHECK", "calling:${data}")
+//            Log.e("CHECK", "calling:${data}")
             try {
-                Log.e("TRY CALL", "try")
+//                Log.e("TRY CALL", "try")
                 data = cryptoCoinApiService.getCryptoCoinRes(LIMIT_SIZE).await()
-                println(data)
+//                println(data)
 
-                Log.e("NETWORK CALL", "${data}")
-//                Log.i("CALLING", "Grace, Grace")
+//                Log.e("NETWORK CALL", "${data}")
+
 
 
             } catch (t:Throwable){
