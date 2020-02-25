@@ -5,8 +5,13 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.polish.mycrypto_account.repository.AllCryptoCoinRepository
+import kotlinx.coroutines.*
 
 class Host : AppCompatActivity() {
+
+    private val viewModelJob = Job()
+    private val viewModelScope = CoroutineScope(viewModelJob + Dispatchers.Main)
 
     lateinit var toolbar: Toolbar
 
@@ -23,5 +28,13 @@ class Host : AppCompatActivity() {
         val navController = this.findNavController(R.id.my_nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
 
+
+        viewModelScope.launch {
+            AllCryptoCoinRepository.getCryptoCoinResponse()
+        }
     }
+
+
+
+
 }
