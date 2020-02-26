@@ -2,22 +2,28 @@ package com.polish.mycrypto_account.model
 
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
+
+@Entity(tableName = "cryptoCoin_table")
 @Parcelize
 data class CryptoCoin(
     @SerializedName("available_supply")
     val availableSupply: String,
     @SerializedName("24h_volume_usd")
     val hVolumeUsd: String,
+
+    @PrimaryKey
     val id: String,
     @SerializedName("last_updated")
     val lastUpdated: String,
     @SerializedName("market_cap_usd")
     val marketCapUsd: String,
     @SerializedName("max_supply")
-    val maxSupply: String,
+    val maxSupply: String? = null,
     val name: String,
     @SerializedName("percent_change_1h")
     val percentChange1h: String,

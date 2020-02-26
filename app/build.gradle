@@ -39,6 +39,10 @@ android {
         targetCompatibility = 1.8
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
 }
 
 dependencies {
@@ -120,6 +124,9 @@ dependencies {
 
     // mockk
     testImplementation "io.mockk:mockk:1.9.3"
+
+    // logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
 
 }

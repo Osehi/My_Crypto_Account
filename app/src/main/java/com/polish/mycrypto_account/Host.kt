@@ -5,8 +5,11 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.polish.mycrypto_account.repository.AllCryptoCoinRepository
+import kotlinx.coroutines.*
 
 class Host : AppCompatActivity() {
+
 
     lateinit var toolbar: Toolbar
 
@@ -23,5 +26,18 @@ class Host : AppCompatActivity() {
         val navController = this.findNavController(R.id.my_nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
 
+
+
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+
+        val navController = this.findNavController(R.id.my_nav_host_fragment)
+
+        return navController.navigateUp()
+    }
+
+
+
+
 }
