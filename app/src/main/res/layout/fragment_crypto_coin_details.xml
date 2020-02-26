@@ -94,7 +94,7 @@
                         android:textAlignment="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{CryptoCoin.priceUsd}"
+                        android:text='@{"$"+CryptoCoin.priceUsd}'
                         tools:text="@string/coin_price"
                         android:layout_gravity="center_horizontal"
                         android:fontFamily="@font/gorditas"
@@ -107,7 +107,7 @@
                         android:textAlignment="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{CryptoCoin.percentChange1h}"
+                        android:text='@{CryptoCoin.percentChange1h+"%"}'
                         tools:text="@string/coin_price_ph"
                         android:fontFamily="@font/carme"
                         android:textColor="#ffffff"
@@ -129,7 +129,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/add_favourite"
                         android:fontFamily="@font/aclonica"
-                        android:background="@drawable/bg_detailed_coin" />
+                        android:background="@drawable/bg_detailed_coin"
+                        android:textSize="18sp"/>
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>

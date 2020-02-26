@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -46,7 +47,10 @@ class FavouriteCoin : Fragment() {
         val recyclerView = binding.recyclerViewFavouriteCoinId
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        var adapter = FavouriteCoinAdapter(FavouriteCoinAdapter.OnClickListener{})
+        var adapter = FavouriteCoinAdapter(FavouriteCoinAdapter.OnClickListener{CryptoCoin ->
+            val action = TabHostDirections.actionTabHost2ToDetailsFavouriteCoin(CryptoCoin)
+            findNavController().navigate(action)
+        })
 
         recyclerView.adapter = adapter
 

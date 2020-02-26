@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.polish.mycrypto_account.model.CryptoCoin
 
-@Database(entities = [CryptoCoin::class], version = 1, exportSchema = false)
+@Database(entities = [CryptoCoin::class], version = 2, exportSchema = false)
 abstract class FavouriteCoinDatabase: RoomDatabase() {
 
 

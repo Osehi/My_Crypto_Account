@@ -23,7 +23,7 @@ data class CryptoCoin(
     @SerializedName("market_cap_usd")
     val marketCapUsd: String,
     @SerializedName("max_supply")
-    val maxSupply: String,
+    val maxSupply: String? = null,
     val name: String,
     @SerializedName("percent_change_1h")
     val percentChange1h: String,

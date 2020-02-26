@@ -12,12 +12,24 @@
         <action
             android:id="@+id/action_tabHost2_to_cryptoCoinDetails"
             app:destination="@id/cryptoCoinDetails" />
+        <action
+            android:id="@+id/action_tabHost2_to_detailsFavouriteCoin"
+            app:destination="@id/detailsFavouriteCoin" />
     </fragment>
     <fragment
         android:id="@+id/cryptoCoinDetails"
         android:name="com.polish.mycrypto_account.ui.CryptoCoinDetails"
         android:label="CryptoCoin Details"
         tools:layout="@layout/fragment_crypto_coin_details" >
+        <argument
+            android:name="CryptoCoin"
+            app:argType="com.polish.mycrypto_account.model.CryptoCoin" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFavouriteCoin"
+        android:name="com.polish.mycrypto_account.ui.DetailsFavouriteCoin"
+        android:label="Favourite Coin Details"
+        tools:layout="@layout/fragment_details_favourite_coin" >
         <argument
             android:name="CryptoCoin"
             app:argType="com.polish.mycrypto_account.model.CryptoCoin" />
