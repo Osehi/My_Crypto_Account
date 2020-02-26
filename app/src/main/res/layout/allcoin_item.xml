@@ -62,7 +62,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="250dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
@@ -85,7 +85,7 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="0dp"
                             android:fontFamily="@font/gorditas"
-                            android:text="@{CryptoCoin.priceUsd}"
+                            android:text='@{"$"+CryptoCoin.priceUsd}'
                             android:textColor="#ffffff"
                             android:textSize="14sp"
                             tools:text="@string/coin_price" />
@@ -105,7 +105,7 @@
                             android:layout_marginTop="50dp"
                             android:layout_marginEnd="8dp"
                             android:fontFamily="@font/carme"
-                            android:text="@{CryptoCoin.percentChange1h}"
+                            android:text='@{CryptoCoin.percentChange1h+"%"}'
                             tools:text="@string/coin_price_ph"
                             android:textColor="#ffffff"
                             android:textSize="18sp"

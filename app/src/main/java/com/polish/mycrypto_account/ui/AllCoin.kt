@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.polish.mycrypto_account.R
@@ -37,8 +39,9 @@ class AllCoin : Fragment() {
         val recyclerView = binding.recyclerViewAllCoinId
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        var adapter = AllCoinAdapter(AllCoinAdapter.OnClickListener{
-
+        var adapter = AllCoinAdapter(AllCoinAdapter.OnClickListener{cryptoCoin ->
+            val action = TabHostDirections.actionTabHost2ToCryptoCoinDetails(cryptoCoin)
+           findNavController().navigate(action)
         })
 
         recyclerView.adapter = adapter
