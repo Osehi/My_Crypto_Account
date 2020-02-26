@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
+
 @Entity(tableName = "cryptoCoin_table")
 @Parcelize
 data class CryptoCoin(

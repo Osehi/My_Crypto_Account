@@ -8,5 +8,18 @@
         android:id="@+id/tabHost2"
         android:name="com.polish.mycrypto_account.ui.TabHost"
         android:label="Crypto Coin"
-        tools:layout="@layout/fragment_tab_host" />
+        tools:layout="@layout/fragment_tab_host" >
+        <action
+            android:id="@+id/action_tabHost2_to_cryptoCoinDetails"
+            app:destination="@id/cryptoCoinDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptoCoinDetails"
+        android:name="com.polish.mycrypto_account.ui.CryptoCoinDetails"
+        android:label="CryptoCoin Details"
+        tools:layout="@layout/fragment_crypto_coin_details" >
+        <argument
+            android:name="CryptoCoin"
+            app:argType="com.polish.mycrypto_account.model.CryptoCoin" />
+    </fragment>
 </navigation>

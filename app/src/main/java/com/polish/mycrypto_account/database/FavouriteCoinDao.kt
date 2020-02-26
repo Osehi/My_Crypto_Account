@@ -1,16 +1,13 @@
 package com.polish.mycrypto_account.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.polish.mycrypto_account.model.CryptoCoin
 
 @Dao
 interface FavouriteCoinDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertFavouritCoin(cryptoCoin: CryptoCoin)
 
     @Delete

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -49,7 +50,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:fontFamily="@font/aclonica"
-                                android:text="@string/coin_symbol"
+                                android:text="@{CryptoCoin.symbol}"
+                                tools:text="@string/coin_symbol"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -70,7 +72,8 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="20dp"
                             android:fontFamily="@font/carter_one"
-                            android:text="@string/coin_name"
+                            android:text="@{CryptoCoin.name}"
+                            tools:text="@string/coin_name"
                             android:textColor="#ffffff"
                             android:textSize="24sp" />
 
@@ -81,7 +84,8 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="0dp"
                             android:fontFamily="@font/gorditas"
-                            android:text="@string/coin_price"
+                            android:text="@{CryptoCoin.priceUsd}"
+                            tools:text="@string/coin_price"
                             android:textColor="#ffffff"
                             android:textSize="18sp" />
 
@@ -100,7 +104,8 @@
                             android:layout_marginTop="50dp"
                             android:layout_marginEnd="8dp"
                             android:fontFamily="@font/carme"
-                            android:text="@string/coin_price_ph"
+                            android:text="@{CryptoCoin.percentChange1h}"
+                            tools:text="@string/coin_price_ph"
                             android:textColor="#ffffff"
                             android:textSize="18sp"
                             android:textStyle="bold" />
